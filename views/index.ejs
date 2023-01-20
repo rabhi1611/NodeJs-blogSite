@@ -30,8 +30,12 @@
                                 <div class="ml-2">
                                     <h6 class="mb-0"><%= lists[i].title %></h6>
                                     <div class="d-flex flex-row mt-1 text-black-50 date-time">
-                                        <div><i class="fa fa-calendar-o"></i><span class="ml-2"><%= lists[i].date %></span></div>
-                                        <div class="ml-3"><i class="fa fa-clock-o"></i><span class="ml-2">6h</span></div>
+                                        <div><i class="fa fa-calendar-o"></i><span class="ml-2"><%= lists[i].date %></span>
+                                            <br>
+                                            <% let str = lists[i].Details.substr(0, 10); %>
+                                            <span class="ml-2"><%= str %>....<a href="/posts/<%= lists[i].title %>">more</a></span>
+                                        </div>
+                                        <div class="ml-3"><!--<i class="fa fa-clock-o"></i><span class="ml-2">6h</span>--></div>
                                     </div>
                                 </div>
                             </div>
